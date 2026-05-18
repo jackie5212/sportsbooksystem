@@ -1,0 +1,4 @@
+/* pages/booking-detail/booking-detail.wxss */
+.container {
+  padding: 20rpx;
+}

@@ -1,0 +1,76 @@
+<!--pages/court-detail/court-detail.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper class="court-swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
+    <swiper-item wx:for="{{court.images}}" wx:key="*this">
+      <image src="{{item}}" mode="aspectFill" class="swiper-image"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 场地信息卡片 -->
+  <view class="court-info">
+    <view class="info-header">
+      <text class="court-name">{{court.name}}</text>
+      <view class="rating-box" wx:if="{{court.rating}}">
+        <text class="star">⭐</text>
+        <text class="rating">{{court.rating}}</text>
+      </view>
+    </view>
+    
+    <text class="court-location">📍 {{court.location}}</text>
+    <text class="court-desc">{{court.description}}</text>
+    
+    <!-- 设施标签 -->
+    <view class="facilities" wx:if="{{court.facilities && court.facilities.length > 0}}">
+      <text class="facility-tag" wx:for="{{court.facilities}}" wx:key="*this" wx:for-item="facility">
+        {{facility}}
+      </text>
+    </view>
+    
+    <view class="price-box">
+      <text class="price-label">价格：</text>
+      <text class="price-value">¥{{court.price_per_hour}}/小时</text>
+    </view>
+  </view>
+
+  <!-- 日期选择器 -->
+  <view class="date-selector">
+    <text class="section-title">📅 选择日期</text>
+    <scroll-view scroll-x class="date-list">
+      <view 
+        class="date-item {{selectedDate === item.date ? 'active' : ''}}"
+        wx:for="{{dateList}}"
+        wx:key="date"
+        bindtap="selectDate"
+        data-date="{{item.date}}"
+      >
+        <text class="date-day">{{item.day}}</text>
+        <text class="date-week">{{item.week}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 时间段选择 -->
+  <view class="time-slots">
+    <text class="section-title">⏰ 可选时间段</text>
+    <view class="slots-grid">
+      <view 
+        class="slot-item {{item.status === 1 ? 'available' : 'booked'}}"
+        wx:for="{{slots}}"
+        wx:key="id"
+        bindtap="selectSlot"
+        data-slot="{{item}}"
+      >
+        <text class="slot-time">{{item.start_time}}-{{item.end_time}}</text>
+        <text class="slot-status">{{item.status === 1 ? '可预定' : '已约满'}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="bottom-bar">
+    <button class="book-button" bindtap="confirmBooking" disabled="{{!selectedSlot}}">
+      {{selectedSlot ? '确认预定' : '请选择时间段'}}
+    </button>
+  </view>
+</view>

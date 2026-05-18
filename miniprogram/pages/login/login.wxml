@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+  <view class="logo-section">
+    <image class="logo" src="/images/logo.png" mode="aspectFit"></image>
+    <text class="title">网球预定系统</text>
+    <text class="subtitle">轻松预定,畅打网球</text>
+  </view>
+
+  <view class="login-section">
+    <button 
+      class="login-btn" 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      hover-class="btn-hover"
+    >
+      <text class="btn-text">微信一键登录</text>
+    </button>
+    
+    <text class="tips">登录后即可预定场地</text>
+  </view>
+
+  <view class="footer">
+    <text class="copyright">© 2026 网球预定系统</text>
+  </view>
+</view>

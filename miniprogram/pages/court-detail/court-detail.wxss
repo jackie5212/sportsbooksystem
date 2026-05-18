@@ -1,0 +1,257 @@
+/* pages/court-detail/court-detail.wxss */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f0f9ff 0%, #f5f5f5 100%);
+  padding-bottom: 140rpx;
+}
+
+.court-swiper {
+  width: 100%;
+  height: 450rpx;
+  position: relative;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+}
+
+.court-info {
+  margin: -40rpx 20rpx 20rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.court-name {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.court-location {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.court-desc {
+  font-size: 26rpx;
+  color: #999;
+  display: block;
+  margin-bottom: 20rpx;
+  line-height: 1.8;
+}
+
+/* 评分 */
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+}
+
+.star {
+  font-size: 24rpx;
+}
+
+.rating {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #f59e0b;
+}
+
+/* 设施标签 */
+.facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-bottom: 20rpx;
+}
+
+.facility-tag {
+  padding: 8rpx 16rpx;
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+  color: #0369a1;
+  border-radius: 12rpx;
+  font-size: 22rpx;
+  border: 1rpx solid #bae6fd;
+}
+
+.price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 8rpx;
+  padding-top: 16rpx;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.price-label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.price-value {
+  font-size: 44rpx;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.date-selector {
+  margin: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 24rpx;
+}
+
+.date-list {
+  white-space: nowrap;
+}
+
+.date-item {
+  display: inline-flex;
+  width: 110rpx;
+  height: 130rpx;
+  margin-right: 16rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 16rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  background: #fafafa;
+}
+
+.date-item.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  box-shadow: 0 4rpx 12rpx rgba(102, 126, 234, 0.3);
+  transform: scale(1.05);
+}
+
+.date-item.active .date-day,
+.date-item.active .date-week {
+  color: #fff;
+}
+
+.date-day {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.date-week {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 8rpx;
+}
+
+.time-slots {
+  margin: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16rpx;
+}
+
+.slot-item {
+  padding: 24rpx 16rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 12rpx;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.slot-item.available {
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+  border-color: #667eea;
+}
+
+.slot-item.available:active {
+  transform: scale(0.95);
+  box-shadow: 0 2rpx 8rpx rgba(102, 126, 234, 0.2);
+}
+
+.slot-item.booked {
+  background-color: #f5f5f5;
+  opacity: 0.4;
+}
+
+.slot-time {
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.slot-status {
+  font-size: 22rpx;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx 30rpx;
+  background: #fff;
+  box-shadow: 0 -4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+.book-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  padding: 24rpx 0;
+  box-shadow: 0 4rpx 12rpx rgba(102, 126, 234, 0.3);
+  border: none;
+}
+
+.book-button::after {
+  border: none;
+}
+
+.book-button:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+.book-button[disabled] {
+  background: #ccc;
+  box-shadow: none;
+}

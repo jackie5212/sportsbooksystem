@@ -1,0 +1,41 @@
+# Go
+server/*.exe
+server/*.test
+server/*.out
+server/vendor/
+server/go.sum
+
+# 配置文件(包含敏感信息)
+server/config.yaml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 日志
+*.log
+logs/
+
+# 数据库
+*.sql.gz
+
+# 小程序
+miniprogram/node_modules/
+miniprogram/miniprogram_npm/
+
+# 构建输出
+dist/
+build/
+
+# 环境变量
+.env
+.env.local
+
+# 临时文件
+tmp/
+temp/
+*.tmp

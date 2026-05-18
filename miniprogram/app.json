@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/court-detail/court-detail",
+    "pages/booking-confirm/booking-confirm",
+    "pages/payment/payment",
+    "pages/my-bookings/my-bookings",
+    "pages/booking-detail/booking-detail",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#07c160",
+    "navigationBarTitleText": "网球预定",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#07c160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my-bookings/my-bookings",
+        "text": "我的预定"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于显示附近场地"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

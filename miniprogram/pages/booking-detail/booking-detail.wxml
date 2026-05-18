@@ -1,0 +1,4 @@
+<!--pages/booking-detail/booking-detail.wxml-->
+<view class="container">
+  <text>订单详情页面</text>
+</view>

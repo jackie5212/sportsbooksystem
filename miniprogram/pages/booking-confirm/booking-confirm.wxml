@@ -1,0 +1,24 @@
+<!--pages/booking-confirm/booking-confirm.wxml-->
+<view class="container">
+  <view class="card">
+    <text class="title">确认预定信息</text>
+    <view class="info-item">
+      <text class="label">场地:</text>
+      <text class="value">{{courtName}}</text>
+    </view>
+    <view class="info-item">
+      <text class="label">日期:</text>
+      <text class="value">{{bookingDate}}</text>
+    </view>
+    <view class="info-item">
+      <text class="label">时间:</text>
+      <text class="value">{{timeSlot}}</text>
+    </view>
+    <view class="info-item">
+      <text class="label">价格:</text>
+      <text class="value price">¥{{price}}</text>
+    </view>
+  </view>
+
+  <button class="confirm-btn" bindtap="confirmOrder">确认预定</button>
+</view>
