@@ -204,8 +204,16 @@ A: 确认MySQL服务已启动,检查config.yaml中的数据库配置。
 
 ## 许可证
 
-MIT License
+禁止商用
 
 ## 联系方式
-
 如有问题,请提交Issue或联系开发者。
+<img width="1396" height="948" alt="ScreenShot_2026-05-15_171837_753" src="https://github.com/user-attachments/assets/09813448-115c-44cd-9ada-4fa9da541714" />
+<img width="1255" height="683" alt="ScreenShot_2026-05-15_171523_361" src="https://github.com/user-attachments/assets/5ffe3da3-928d-4b41-9097-b9d94a5a780a" />
+<img width="1254" height="812" alt="ScreenShot_2026-05-15_171513_643" src="https://github.com/user-attachments/assets/2559300b-03f5-49b6-9f2e-312213130b81" />
+<img width="891" height="790" alt="ScreenShot_2026-05-15_171435_919" src="https://github.com/user-attachments/assets/04010f6a-bce0-40bb-9952-633cc3267ab3" />
+<img width="1253" height="666" alt="ScreenShot_2026-05-15_171402_305" src="https://github.com/user-attachments/assets/b70bf15e-4395-4073-8dbf-41586179b1ec" />
+
+
+
+<img width="1258" height="834" alt="ScreenShot_2026-05-15_171347_523" src="https://github.com/user-attachments/assets/ebd2863f-4dee-425b-9b39-b30d4ae5ccd9" />
