@@ -1,0 +1,21 @@
+server:
+  port: "8080"
+  mode: "debug"
+
+database:
+  host: "localhost"
+  port: "3306"
+  user: "root"
+  password: "root"
+  dbname: "tennis_booking"
+  charset: "utf8mb4"
+
+jwt:
+  secret: "tennis-booking-secret-key-2026-change-in-production"
+  expire_hour: 72
+
+wechat:
+  app_id: "your_wechat_appid"
+  app_secret: "your_wechat_appsecret"
+  mch_id: "your_mch_id"
+  api_key: "your_api_key"
